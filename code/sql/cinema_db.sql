@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS movies(
     m_language VARCHAR(20) NOT NULL,
     m_subtitles VARCHAR(20),
     m_format ENUM('2D', '3D') NOT NULL,
-    UNIQUE(m_title, m_language),
+    UNIQUE(m_title, m_language, m_format),
     PRIMARY KEY(ID_movie)
 )ENGINE = INNODB;
 
