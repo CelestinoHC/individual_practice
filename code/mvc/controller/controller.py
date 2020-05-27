@@ -1023,7 +1023,7 @@ class Controller:
             return
         self.view.msg('Ingresa los valores a modificar (vacio para dejarlo igual): ')
         whole_vals = self.ask_ticket()
-        fields, vals = self.update_lists(['t_schedule', 't_seat', 't_date'], whole_vals)
+        fields, vals = self.update_lists(['t_date', 't_schedule', 't_seat'], whole_vals)
         vals.append(ID_ticket)
         vals = tuple(vals)
         out = self.model.update_ticket(fields, vals)
