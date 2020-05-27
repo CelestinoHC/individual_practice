@@ -30,6 +30,7 @@ class Model:
             vals = (name, lastname1, lastname2, username, email, password)
             self.cursor.execute(sql, vals)
             self.cnx.commit()
+            return True
         except connector.Error as err:
             self.cnx.rollback()
             return err
@@ -487,7 +488,7 @@ class Model:
             self.cnx.rollback()
             return err
 
-    
-    
 
-    
+
+
+            

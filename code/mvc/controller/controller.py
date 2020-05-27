@@ -200,7 +200,7 @@ class Controller:
             return
         self.view.msg('Ingresa los valores a modificar (vacio para dejarlo igual): ')
         whole_vals = self.ask_admin_create()
-        fields, vals = self.update_lists(['name', 'lastname1', 'lastname2', 'username', 'email', 'password'], whole_vals)
+        fields, vals = self.update_lists(['a_name', 'a_lastname1', 'a_lastname2', 'a_username', 'a_email', 'a_password'], whole_vals)
         vals.append(ID_admin)
         vals = tuple(vals)
         out = self.model.update_admin(fields, vals)
